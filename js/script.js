@@ -23,7 +23,7 @@ const Main = {
             body: JSON.stringify(objeto)
         }
 
-        const response = await fetch(`http://api.mathjs.org/v4/`, config)
+        const response = await fetch(`https://api.mathjs.org/v4/`, config)
         const data = await response.json()
         this.output(data)
     },
