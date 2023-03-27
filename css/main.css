@@ -1,0 +1,33 @@
+@import url(formulary.css);
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url(../fonts/Helvetica\ Neue\ Regular.otf);
+}
+
+:root{
+    --main-font-color: #fff;
+}
+
+/* --definições gerais-- */
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* definições gerais */
+body{
+    font-size: 16px;
+    font-family: 'Helvetica Neue';
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-image: url(../img/5994700.jpg);
+    background-color: rgba(0,0,0,0.7);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: var(--main-font-color);
+}
+

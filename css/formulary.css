@@ -1,0 +1,159 @@
+/* Card central */
+.container{
+    height: 700px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px var(--main-font-color);
+    display: grid;
+    place-items: center;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.5s;
+}
+
+/* Transição para quando o formulário for enviado */
+.container.transition{
+    opacity: 0;
+}
+
+/* Quando formulário enviado alterar o tamanho */
+.container.output{
+    height: 330px;
+}
+
+/* Wrapper do formulário */
+.calc{
+    align-self: self-start;
+    width: 100%;
+}
+
+/* Formulário */
+#simulador{
+    display: grid;
+    gap: 20px;
+}
+
+/* Wrapper dos Label + Input */
+.label-input{
+    font-size: 20px;
+    margin: 0 auto;
+    display: grid;
+    gap: 5px;
+    width: 80%;
+}
+
+/* Configurações dos Label */
+.label-input label{
+    margin-left: 2px;
+    font-size: 24px;
+}
+
+/* Configurações de tamanho, pading e borda dos Inputs*/
+.label-input input{
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+/* Configurações do que envolve o Input(duração da aplicação)+Select */
+.wrapper{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.wrapper input{
+    flex: 2;
+}
+.wrapper select{
+    border-radius: 5px;
+    padding: 5px;
+    height: 38px;
+    font-size: 15px;
+    flex: 1;
+    background-color: var(--main-font-color);
+}
+
+/* Configurações no botão de enviar o formulário */
+.btn{
+    backdrop-filter: blur(40px);
+    font-family: inherit;
+    color: inherit;
+    border: 1px solid var(--main-font-color);
+    background-color: transparent;
+    width: 30%;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.btn:active{
+    transform: scale(0.97);
+}
+
+
+/* Erro no Formulário */
+/* Classe aplicada pelo JavaScript para indicar erro ao preencher formulário */
+input.erroFormulario, select.erroFormulario {
+    transition: 0.4s;
+    border-color: red;
+    outline-color: red;
+}
+
+/* Classe aplicada pelo JavaScript para indicar erro ao preencher formulário */
+select.erroFormulario {
+    transition: 0.4s;
+    color: red;
+}
+
+
+/* Formulário Enviado: */
+/* Configuração do texto que aparece após sucesso no envio do formulário */
+p{
+    font-size: 25px;
+    margin: 0 auto;
+    width: 80%;
+    align-self: flex-end;
+}
+
+/* Deslocamento do botão após sucesso no envio do formulário */
+.btn.reload{
+    align-self: flex-start;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container{
+        backdrop-filter: blur(0px);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body{
+        height: 100dvh !important;
+    }
+    .container{
+        width: 100%;
+        backdrop-filter: blur(4px);
+        box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    }
+    .container.output{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .btn.reload{
+        width: 200px;
+    }
+
+    .wrapper input{
+        flex: 2;
+        width: 50%;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .container{
+        height: 85dvh;
+    }
+}

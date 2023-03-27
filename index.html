@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Juros Compostos</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="bg"></div> -->
+        <h1>Calculadora Juros Compostos</h1>
+        <div class="calc">
+            <form action="" id="simulador">
+                <div class="label-input">
+                    <label for="">Nome:</label>
+                    <input type="text" name="nome" placeholder="Digite seu nome...">
+                </div>
+                <div class="label-input">
+                    <label for="">Valor aplicado mensalmente:</label>
+                    <input type="text" name="valorMensal" placeholder="Apenas números">
+                </div>
+                <div class="label-input">
+                    <label for="">Taxa de juros ao mês:</label>
+                    <input type="text" name="taxaJuros" placeholder="% ao mês">
+                </div>
+                <div class="label-input">
+                    <label for="">Duração da aplicação:</label>
+                    <div class="wrapper">
+                        <input type="number" name="tempo" placeholder="Apenas números">
+                        <select name="MesOuAno" id="">
+                            <option disabled selected hidden>Selecione</option>
+                            <option value="meses">Mês(es)</option>
+                            <option value="anos">Ano(s)</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn">Simular</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
