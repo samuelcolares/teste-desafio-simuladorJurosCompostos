@@ -39,7 +39,7 @@ const Main = {
         this.$container.classList.add(`transition`)
 
         setTimeout(() => {
-            this.$container.innerHTML = `<p>Olá ${nomeFormatado}, juntando ${valorMensal} todo mês, você terá ${resultado} em ${tempo} ${this.unidades(mesOuAno, tempo)}.</p><button class="btn reload" onclick="location.reload()">Fazer outra simulação</button>`
+            this.$container.innerHTML = `<p>Olá ${nomeFormatado}, juntando ${valorMensal} todo mês, em ${tempo} ${this.unidades(mesOuAno, tempo)} você terá: <span class="result">${resultado}</span>.</p><button class="btn reload" onclick="location.reload()">Fazer outra simulação</button>`
             this.$container.classList.remove(`transition`)
             this.$container.classList.add(`output`)
         }, 1000)
